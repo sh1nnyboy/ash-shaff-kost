@@ -1,0 +1,6 @@
+# Robots.txt file for Kost Ash-Shaff
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.hasanalbanna.web.id/sitemap.xml 
