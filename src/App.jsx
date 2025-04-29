@@ -10,9 +10,9 @@ import './App.css'
 
 function App() {
   return (
-    <div className="min-h-screen h-full w-full bg-accent-light text-primary-dark flex flex-col">
-      <Header className="w-full" />
-      <main className="flex-1 w-full">
+    <div className="min-h-screen bg-accent-light text-primary-dark">
+      <Header />
+      <main className="pt-16">
         <Hero />
         <About />
         <Facilities />
@@ -20,7 +20,7 @@ function App() {
         <Location />
         <Contact />
       </main>
-      <Footer className="w-full" />
+      <Footer />
     </div>
   )
 }

@@ -63,7 +63,7 @@ export default function Hero() {
             {[
               { value: "20+", label: "Kamar" },
               { value: "4.8", label: "Rating" },
-              { value: "5+", label: "Tahun" }
+              { value: "8+", label: "Tahun" }
             ].map((stat, index) => (
               <div key={index} className="bg-white/80 backdrop-blur p-3 md:p-4 rounded-lg shadow-sm text-center">
                 <p className="text-primary text-xl md:text-2xl font-bold">{stat.value}</p>

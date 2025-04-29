@@ -4,7 +4,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-primary-light bg-opacity-90 backdrop-blur-md shadow-md sticky top-0 z-50">
+    <header className="bg-primary-light bg-opacity-90 backdrop-blur-md shadow-md fixed top-0 left-0 right-0 z-50">
       <div className="container-custom py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
@@ -16,19 +16,19 @@ export default function Header() {
           
           {/* Desktop Nav */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#home" className="text-white hover:text-accent transition-colors font-medium">
+            <a href="#beranda" className="text-white hover:text-accent transition-colors font-medium">
               Beranda
             </a>
-            <a href="#facilities" className="text-white hover:text-accent transition-colors font-medium">
+            <a href="#fasilitas" className="text-white hover:text-accent transition-colors font-medium">
               Fasilitas
             </a>
             <a href="#rooms" className="text-white hover:text-accent transition-colors font-medium">
               Kamar
             </a>
-            <a href="#location" className="text-white hover:text-accent transition-colors font-medium">
+            <a href="#lokasi" className="text-white hover:text-accent transition-colors font-medium">
               Lokasi
             </a>
-            <a href="#contact" className="text-white hover:text-accent transition-colors font-medium">
+            <a href="#kontak" className="text-white hover:text-accent transition-colors font-medium">
               Kontak
             </a>
           </nav>
@@ -68,14 +68,14 @@ export default function Header() {
         {mobileMenuOpen && (
           <nav className="md:hidden mt-4 space-y-3 pb-3">
             <a
-              href="#home"
+              href="#beranda"
               className="block text-white hover:text-accent transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Beranda
             </a>
             <a
-              href="#facilities"
+              href="#fasilitas"
               className="block text-white hover:text-accent transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
@@ -89,14 +89,14 @@ export default function Header() {
               Kamar
             </a>
             <a
-              href="#location"
+              href="#lokasi"
               className="block text-white hover:text-accent transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Lokasi
             </a>
             <a
-              href="#contact"
+              href="#kontak"
               className="block text-white hover:text-accent transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
