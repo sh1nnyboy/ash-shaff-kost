@@ -17,12 +17,12 @@ export default function Hero() {
       {/* Decorative background elements */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_35%,rgba(80,113,109,0.1),transparent_40%),radial-gradient(circle_at_80%_10%,rgba(168,83,25,0.08),transparent_30%)]"></div>
       
-      <div className="container-custom min-h-[600px] sm:min-h-[650px] md:min-h-[700px] lg:min-h-screen flex flex-col lg:flex-row items-center justify-center lg:justify-between py-16 lg:py-0 px-4 md:px-6 relative z-10">
+      <div className="container-custom min-h-[600px] sm:min-h-[650px] md:min-h-[700px] lg:min-h-screen flex flex-col lg:flex-row items-center justify-center lg:justify-between py-16 lg:py-0 px-6 md:px-8 relative z-10">
         {/* Left content column */}
         <div className="w-full lg:w-1/2 lg:max-w-lg mb-12 lg:mb-0 text-center lg:text-left order-2 lg:order-1 mt-8 lg:mt-0 transition-all duration-1000 ease-out transform translate-y-0 opacity-100">
           <div className={`transition-all duration-700 delay-100 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
             <p className="inline-block px-3 py-1 mb-6 bg-primary/10 text-primary text-sm font-medium rounded-full">
-              Kost Putra & Putri di Bantul, Yogyakarta
+              Kost Putra di Bantul, Yogyakarta
             </p>
           </div>
           
@@ -31,10 +31,9 @@ export default function Hero() {
               Kost <span className="text-primary font-extrabold">Ash-Shaff</span> Hunian Nyaman di Bantul
             </h1>
           </div>
-          
           <div className={`transition-all duration-700 delay-500 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
             <p className="text-gray-600 mb-8 text-base md:text-lg max-w-md mx-auto lg:mx-0">
-              Hunian nyaman, aman dan strategis untuk mahasiswa UMY, ISI dan pekerja di kawasan Bantul Yogyakarta dengan fasilitas lengkap dan harga terjangkau.
+              Hunian nyaman, aman dan strategis untuk mahasiswa UMY Yogyakarta dengan fasilitas lengkap dan harga terjangkau.
             </p>
           </div>
           
