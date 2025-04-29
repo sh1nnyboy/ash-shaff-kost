@@ -13,11 +13,11 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="beranda" className="relative overflow-hidden pt-20 md:pt-20 lg:pt-0 bg-accent-light">
+    <section id="beranda" className="relative overflow-hidden h-screen pt-0 bg-accent-light flex items-center">
       {/* Decorative background elements */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_35%,rgba(80,113,109,0.1),transparent_40%),radial-gradient(circle_at_80%_10%,rgba(168,83,25,0.08),transparent_30%)]"></div>
       
-      <div className="container-custom min-h-[600px] sm:min-h-[650px] md:min-h-[700px] lg:min-h-screen flex flex-col lg:flex-row items-center justify-center lg:justify-between py-16 lg:py-0 px-6 md:px-8 relative z-10">
+      <div className="container-custom h-full w-full flex flex-col lg:flex-row items-center justify-center lg:justify-between py-16 lg:py-16 px-6 md:px-8 lg:px-10 relative z-10">
         {/* Left content column */}
         <div className="w-full lg:w-1/2 lg:max-w-lg mb-12 lg:mb-0 text-center lg:text-left order-2 lg:order-1 mt-8 lg:mt-0 transition-all duration-1000 ease-out transform translate-y-0 opacity-100">
           <div className={`transition-all duration-700 delay-100 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
@@ -61,8 +61,8 @@ export default function Hero() {
           {/* Stats */}
           <div className={`grid grid-cols-3 gap-4 mt-12 max-w-md mx-auto lg:mx-0 transition-all duration-700 delay-900 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
             {[
-              { value: "50+", label: "Kamar" },
-              { value: "4.8", label: "Kepuasan" },
+              { value: "20+", label: "Kamar" },
+              { value: "4.8", label: "Rating" },
               { value: "5+", label: "Tahun" }
             ].map((stat, index) => (
               <div key={index} className="bg-white/80 backdrop-blur p-3 md:p-4 rounded-lg shadow-sm text-center">
@@ -105,14 +105,14 @@ export default function Hero() {
                 </div>
                 <h3 className="ml-2 md:ml-3 font-medium text-gray-900 text-sm md:text-base">Lokasi Strategis</h3>
               </div>
-              <p className="text-gray-600 text-xs md:text-sm">5 menit jalan kaki ke Kampus UMY dan ISI Yogyakarta</p>
+              <p className="text-gray-600 text-xs md:text-sm">5 menit jalan kaki ke Kampus UMY Yogyakarta</p>
             </div>
             
             {/* Price tag */}
             <div className="absolute -top-3 -right-3 md:-right-6 bg-white py-2 px-4 rounded-lg shadow-xl z-20">
               <p className="text-xs md:text-sm text-gray-500">Mulai dari</p>
               <p className="text-primary font-bold text-sm md:text-base">
-                Rp 750rb<span className="text-xs md:text-sm font-normal">/bulan</span>
+                Rp 8,8 jt<span className="text-xs md:text-sm font-normal">/tahun</span>
               </p>
             </div>
           </div>

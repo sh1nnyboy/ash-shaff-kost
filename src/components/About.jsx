@@ -183,7 +183,7 @@ export default function About() {
             </p>
             
             <p className="text-gray-600 mb-6 md:mb-8 leading-relaxed text-sm md:text-base">
-              Didirikan pada tahun 2018, kami terus berkomitmen menyediakan <strong>kost putra dan putri</strong> dengan lingkungan yang mendukung produktivitas, kreativitas, dan kehidupan sosial yang seimbang bagi penghuni kami dengan harga terjangkau.
+              Didirikan pada tahun 2018, kami terus berkomitmen menyediakan <strong>kost putra muslim</strong> dengan lingkungan yang mendukung produktivitas, kreativitas, dan kehidupan sosial yang seimbang bagi penghuni kami dengan harga terjangkau.
             </p>
             
             {/* Features grid */}
