@@ -13,7 +13,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="beranda" className="relative overflow-hidden h-screen pt-0 bg-accent-light flex items-center">
+    <section id="home" className="relative overflow-hidden min-h-screen flex items-center">
       {/* Decorative background elements */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_35%,rgba(80,113,109,0.1),transparent_40%),radial-gradient(circle_at_80%_10%,rgba(168,83,25,0.08),transparent_30%)]"></div>
       
