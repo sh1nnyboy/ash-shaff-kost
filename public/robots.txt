@@ -11,4 +11,4 @@ Disallow: /wp-admin/
 Disallow: /wp-login/
 
 # Sitemap location
-Sitemap: https://ashshaff.my.id/sitemap.xml
+Sitemap: https://www.ashshaff.my.id/sitemap.xml
