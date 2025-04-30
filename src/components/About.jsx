@@ -52,7 +52,7 @@ export default function About() {
   };
 
   return (
-    <section id="about" className="py-12 md:py-20 bg-secondary/5">
+    <section id="about" className="py-12 md:py-20 bg-[#f8f9fa] -mt-1">
       <div className="container-custom px-4 md:px-6">
         <article className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Image section with stacked photos */}

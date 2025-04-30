@@ -388,3 +388,22 @@ button:focus-visible {
   filter: blur(4px);
   transform: translateZ(-10px);
 }
+
+/* Wave divider styles */
+.wave-divider {
+  position: relative;
+  margin-top: -1px;
+  margin-bottom: -1px;
+  z-index: 10;
+  width: 100%;
+}
+
+section {
+  position: relative;
+  z-index: 1;
+}
+
+/* Ensure the wave divider doesn't create unwanted scrollbars */
+body {
+  overflow-x: hidden;
+}
