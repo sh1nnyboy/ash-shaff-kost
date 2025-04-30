@@ -13,26 +13,26 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="home" className="relative overflow-hidden flex items-center">
+    <section id="home" className="relative overflow-hidden flex items-center py-8 md:py-12">
       {/* Decorative background elements */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_35%,rgba(80,113,109,0.1),transparent_40%),radial-gradient(circle_at_80%_10%,rgba(168,83,25,0.08),transparent_30%)]"></div>
       
-      <div className="container-custom w-full flex flex-col lg:flex-row items-center justify-center lg:justify-between py-8 lg:py-10 px-6 md:px-8 lg:px-10 relative z-10">
+      <div className="container-custom w-full flex flex-col lg:flex-row items-center justify-center lg:justify-between py-10 lg:py-16 px-6 md:px-8 lg:px-10 relative z-10">
         {/* Left content column */}
-        <div className="w-full lg:w-1/2 lg:max-w-lg mb-8 lg:mb-0 text-center lg:text-left order-2 lg:order-1 mt-8 lg:mt-0 transition-all duration-1000 ease-out transform translate-y-0 opacity-100">
+        <div className="w-full lg:w-1/2 lg:max-w-lg mb-10 lg:mb-0 text-center lg:text-left order-2 lg:order-1 mt-8 lg:mt-0 transition-all duration-1000 ease-out transform translate-y-0 opacity-100">
           <div className={`transition-all duration-700 delay-100 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
-            <p className="inline-block px-3 py-1 mb-4 bg-primary/10 text-primary text-sm font-medium rounded-full">
+            <p className="inline-block px-3 py-1 mb-5 bg-primary/10 text-primary text-sm font-medium rounded-full">
               Kost Putra di Bantul, Yogyakarta
             </p>
           </div>
           
           <div className={`transition-all duration-700 delay-300 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4 leading-tight text-gray-800">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-5 leading-tight text-gray-800">
               Kost <span className="text-primary font-extrabold">Ash-Shaff</span> Hunian Nyaman di Bantul
             </h1>
           </div>
           <div className={`transition-all duration-700 delay-500 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
-            <p className="text-gray-600 mb-6 text-base md:text-lg max-w-md mx-auto lg:mx-0">
+            <p className="text-gray-600 mb-7 text-base md:text-lg max-w-md mx-auto lg:mx-0">
               Hunian nyaman, aman dan strategis untuk mahasiswa UMY Yogyakarta dengan fasilitas lengkap dan harga terjangkau.
             </p>
           </div>
@@ -59,7 +59,7 @@ export default function Hero() {
           </div>
           
           {/* Stats */}
-          <div className={`grid grid-cols-3 gap-4 mt-10 max-w-md mx-auto lg:mx-0 transition-all duration-700 delay-900 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
+          <div className={`grid grid-cols-3 gap-4 mt-12 max-w-md mx-auto lg:mx-0 transition-all duration-700 delay-900 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
             {[
               { value: "Tersedia", label: "Kamar Kosong" },
               { value: "4.8", label: "Rating" },
