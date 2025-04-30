@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Halaman Tidak Ditemukan | Kost Ash-Shaff</title>
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #8a9e91;
+            --primary-dark: #324f45;
+            --secondary: #1f2f29;
+            --accent: #f0ebd8;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--accent);
+            color: var(--secondary);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .noise {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+            opacity: 0.3;
+            z-index: 1;
+        }
+        
+        .container {
+            max-width: 90%;
+            width: 600px;
+            text-align: center;
+            padding: 40px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            opacity: 0.8;
+            animation: pulse 6s infinite ease-in-out;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--primary-dark);
+            position: relative;
+            display: inline-block;
+        }
+        
+        h1::after {
+            content: "";
+            position: absolute;
+            width: 30%;
+            height: 8px;
+            background: linear-gradient(to right, var(--primary), transparent);
+            bottom: -5px;
+            left: 35%;
+            border-radius: 4px;
+        }
+        
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            color: var(--secondary);
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .error-code {
+            font-size: 1rem;
+            color: var(--primary);
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+            opacity: 0.7;
+            font-weight: 500;
+        }
+        
+        .home-link {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .home-link:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(50, 79, 69, 0.2);
+            border-color: var(--primary-dark);
+        }
+        
+        .decoration {
+            position: absolute;
+            z-index: 0;
+        }
+        
+        .circle-1 {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--primary-dark), var(--primary));
+            top: -150px;
+            right: -150px;
+            opacity: 0.1;
+        }
+        
+        .circle-2 {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            bottom: -100px;
+            left: -100px;
+            opacity: 0.1;
+        }
+        
+        .lost-icon {
+            font-size: 5rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+            opacity: 0.8;
+        }
+        
+        .loop-text {
+            font-size: 0.9rem;
+            color: var(--primary);
+            opacity: 0.7;
+            margin-top: 30px;
+            position: relative;
+            display: inline-block;
+            animation: spin 15s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .loop-circle {
+            width: 120px;
+            height: 120px;
+            border: 1px solid var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 40px auto;
+            position: relative;
+            opacity: 0.6;
+        }
+        
+        .dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            position: absolute;
+            animation: orbitDot 6s linear infinite;
+        }
+        
+        @keyframes orbitDot {
+            0% { transform: rotate(0deg) translateX(60px) rotate(0deg); }
+            100% { transform: rotate(360deg) translateX(60px) rotate(-360deg); }
+        }
+        
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; }
+            p { font-size: 1rem; }
+            .loop-circle { width: 100px; height: 100px; }
+            @keyframes orbitDot {
+                0% { transform: rotate(0deg) translateX(50px) rotate(0deg); }
+                100% { transform: rotate(360deg) translateX(50px) rotate(-360deg); }
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="noise"></div>
+    
+    <div class="decoration circle-1"></div>
+    <div class="decoration circle-2"></div>
+    
+    <div class="container">
+        <div class="logo">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="48" fill="none" stroke="#8a9e91" stroke-width="2"/>
+                <path d="M30,35 L50,25 L70,35 L70,65 L50,75 L30,65 Z" fill="none" stroke="#8a9e91" stroke-width="2"/>
+                <text x="50" y="55" font-family="Poppins, sans-serif" font-size="12" text-anchor="middle" fill="#8a9e91">Ash-Shaff</text>
+            </svg>
+        </div>
+        
+        <div class="error-code">ERROR 404</div>
+        
+        <h1>Kamu Tersesat!</h1>
+        
+        <p>Halaman yang kamu cari sepertinya telah berpindah atau tidak pernah ada.</p>
+        
+        <div class="loop-circle">
+            <div class="dot"></div>
+            <span>Kita semua terjebak dalam loop</span>
+        </div>
+        
+        <a href="/" class="home-link">Kembali ke Beranda</a>
+    </div>
+    
+    <script>
+        // Add some interactive elements for fun
+        document.addEventListener('mousemove', function(e) {
+            const x = e.clientX / window.innerWidth - 0.5;
+            const y = e.clientY / window.innerHeight - 0.5;
+            
+            document.querySelector('.circle-1').style.transform = `translate(${x * 20}px, ${y * 20}px)`;
+            document.querySelector('.circle-2').style.transform = `translate(${-x * 20}px, ${-y * 20}px)`;
+        });
+    </script>
+</body>
+</html> 

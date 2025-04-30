@@ -1,0 +1,230 @@
+/* 404 Error Page with Train Animation */
+
+.error-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0ebd8; /* Ash-Shaff accent color */
+  color: #324f45; /* Ash-Shaff primary dark */
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.main {
+  margin-top: 0;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.main svg {
+  width: 100%;
+  height: auto;
+}
+
+.error-content {
+  margin-top: 20px;
+  text-align: center;
+  max-width: 600px;
+}
+
+.error-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #324f45;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.error-content h1:after {
+  content: "";
+  position: absolute;
+  left: 25%;
+  bottom: -10px;
+  width: 50%;
+  height: 4px;
+  background: #8a9e91;
+  border-radius: 2px;
+}
+
+.error-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #324f45;
+}
+
+.home-button {
+  display: inline-block;
+  background-color: #8a9e91;
+  color: white;
+  text-decoration: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  border: 2px solid #8a9e91;
+}
+
+.home-button:hover {
+  background-color: #324f45;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(50, 79, 69, 0.2);
+  border-color: #324f45;
+}
+
+/* Train Animation Styles */
+.st0 {
+  fill: #f0ebd8; /* Sky and land - lighter accent color */
+}
+
+.st2 {
+  fill: #8a9e91; /* Track color - primary green */
+}
+
+.st3 {
+  fill: #324f45; /* Track details - dark green */
+}
+
+.st4, .st6 {
+  fill: #fff;
+  stroke: #d0ccb8; /* Cloud border - subtle light green */
+  stroke-miterlimit: 10;
+}
+
+.st6 {
+  stroke: #8a9e91; /* Wheel border - primary green */
+  stroke-width: 2;
+}
+
+.st7, .st8, .st9 {
+  stroke: #324f45; /* Train details - dark green */
+  stroke-miterlimit: 10;
+}
+
+.st7 {
+  stroke-width: 5;
+  stroke-linecap: round;
+  fill: none;
+}
+
+.st8, .st9 {
+  fill: #fff;
+}
+
+.st9 {
+  fill: none;
+}
+
+.st10 {
+  font-family: 'Poppins', sans-serif;
+  fill: #324f45; /* Text color - dark green */
+}
+
+/* Animation Keyframes */
+@keyframes cloud001 {
+  0% { transform: translateX(-1000px) translateY(3px); }
+  100% { transform: translateX(1000px) translateY(0); }
+}
+
+@keyframes cloud002 {
+  0% { transform: translateX(-1000px) translateY(3px); }
+  100% { transform: translateX(1000px) translateY(0); }
+}
+
+@keyframes cloud003 {
+  0% { transform: translateX(-1000px) translateY(3px); }
+  100% { transform: translateX(1000px) translateY(0); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) translateX(0); }
+  50% { transform: translateY(8px) translateX(5px); }
+  100% { transform: translateY(0px) translateX(0); }
+}
+
+@keyframes slide {
+  from { transform: translateX(0px); }
+  to { transform: translateX(100px); }
+}
+
+@keyframes jig {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(1px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes land {
+  from { transform: translateX(0); }
+  to { transform: translateX(1000px); }
+}
+
+@keyframes braces {
+  0% { transform: translateX(-2px); }
+  25% { transform: translateX(3px); }
+  50% { transform: translateX(-2px); }
+  75% { transform: translateX(3px); }
+  100% { transform: translateX(-2px); }
+}
+
+/* Apply Animations */
+#cloud1 {
+  animation: cloud003 15s linear infinite;
+}
+
+#cloud2 {
+  animation: cloud002 25s linear infinite;
+}
+
+#cloud3 {
+  animation: cloud003 20s linear infinite;
+}
+
+#cloud4 {
+  animation: float 4s linear infinite;
+}
+
+#cloud5 {
+  animation: float 8s linear infinite;
+}
+
+#tracks {
+  animation: slide 650ms linear infinite;
+}
+
+#bumps {
+  animation: land 10000ms linear infinite;
+}
+
+#car-layers {
+  animation: jig 0.35s linear infinite;
+}
+
+#bracefront, #braceback {
+  animation: braces 1s linear infinite;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .main {
+    margin-top: 0;
+  }
+  
+  .error-content h1 {
+    font-size: 2rem;
+  }
+  
+  .error-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .error-content h1 {
+    font-size: 1.8rem;
+  }
+} 
