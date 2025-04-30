@@ -86,7 +86,24 @@ export default function Header() {
       }`}
       style={{ marginTop: 0 }}
     >
-      <div className="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+      {/* Futuristic decorative element */}
+      <div className="absolute top-0 right-0 h-full overflow-hidden">
+        <div className="w-24 h-24 md:w-32 md:h-32 bg-gradient-to-br from-teal-400 via-emerald-500 to-green-400 rounded-full opacity-30 blur-sm absolute -right-8 -top-8 animate-pulse"></div>
+        <div className="w-16 h-16 border border-white/20 rounded-full absolute top-6 right-6 md:top-4 md:right-12 backdrop-blur-sm">
+          <div className="absolute inset-1 rounded-full bg-gradient-to-br from-emerald-400/20 to-teal-400/30"></div>
+          <div className="absolute inset-[5px] rounded-full border border-white/10 flex items-center justify-center">
+            <div className="w-1/2 h-1/2 rounded-full bg-white/10 backdrop-blur-md animate-ping opacity-75 absolute"></div>
+            <div className="w-1/3 h-1/3 rounded-full bg-white/30 absolute"></div>
+          </div>
+          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
+            <circle className="text-white/10 stroke-2 fill-none" cx="50" cy="50" r="45" stroke="currentColor" />
+            <path className="text-emerald-400/70 stroke-2 fill-none animate-[spin_10s_linear_infinite]" d="M50 5 A 45 45 0 0 1 95 50" stroke="currentColor" />
+            <path className="text-teal-400/70 stroke-2 fill-none animate-[spin_15s_linear_infinite]" d="M50 5 A 45 45 0 1 0 95 50" stroke="currentColor" />
+          </svg>
+        </div>
+      </div>
+
+      <div className="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between relative z-10">
         {/* Logo */}
         <a href="/" className="flex items-center relative group">
           <span className="font-extralight text-xl tracking-tight text-white group-hover:opacity-90 transition-opacity">
