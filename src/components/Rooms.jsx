@@ -106,6 +106,20 @@ export default function Rooms() {
               className="w-full h-full object-cover transition-opacity duration-500"
               loading="lazy"
             />
+            
+            {/* Carousel indicators */}
+            <div className="absolute bottom-3 md:bottom-4 left-0 right-0 flex justify-center gap-1 md:gap-2 z-10">
+              {images.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToSlide(index)}
+                  className={`w-2 md:w-3 h-2 md:h-3 rounded-full transition-all ${
+                    index === currentImageIndex ? 'bg-primary w-4 md:w-6' : 'bg-white bg-opacity-80'
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                ></button>
+              ))}
+            </div>
           </div>
           
           {/* Details section */}
@@ -151,20 +165,6 @@ export default function Rooms() {
                   <span>Pelunasan dilakukan saat penyerahan kunci</span>
                 </li>
               </ul>
-            </div>
-            
-            {/* Carousel indicators */}
-            <div className="flex justify-center gap-1 md:gap-2 mt-3 mb-2">
-              {images.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => goToSlide(index)}
-                  className={`w-2 md:w-3 h-2 md:h-3 rounded-full transition-all ${
-                    index === currentImageIndex ? 'bg-primary w-4 md:w-6' : 'bg-gray-300'
-                  }`}
-                  aria-label={`Go to slide ${index + 1}`}
-                ></button>
-              ))}
             </div>
             
             <div className="mt-4 md:mt-6 text-center">
