@@ -1,0 +1,7 @@
+# Security contact information for ashshaff.my.id
+Contact: mailto:fusiodabanna@gmail.com
+Expires: 2025-12-31T23:59:59+07:00
+Preferred-Languages: id, en
+Canonical: https://ashshaff.my.id/.well-known/security.txt
+Policy: https://ashshaff.my.id/security-policy
+Hiring: https://ashshaff.my.id/careers 

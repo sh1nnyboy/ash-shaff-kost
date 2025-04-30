@@ -1,6 +1,14 @@
-# Robots.txt file for Kost Ash-Shaff
+# Allow all crawlers
 User-agent: *
 Allow: /
 
+# Disallow sensitive directories
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+Disallow: /backend/
+Disallow: /wp-admin/
+Disallow: /wp-login/
+
 # Sitemap location
-Sitemap: https://www.hasanalbanna.web.id/sitemap.xml 
+Sitemap: https://ashshaff.my.id/sitemap.xml
