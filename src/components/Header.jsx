@@ -145,15 +145,28 @@ export default function Header() {
 
         {/* Mobile Menu Toggle */}
         <button 
-          className="md:hidden flex items-center justify-center w-10 h-10 text-white hover:text-white rounded-full bg-green-700/20"
+          className="md:hidden flex items-center justify-center w-10 h-10 text-white hover:text-white rounded-full bg-green-700/20 relative overflow-hidden border border-white/10 backdrop-blur-sm hover:bg-green-700/30 transition-all duration-300 group"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
         >
+          <div className="absolute inset-0 bg-gradient-to-br from-emerald-400/10 to-teal-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           {mobileMenuOpen ? (
-            <X size={20} strokeWidth={1.5} />
+            <X size={18} strokeWidth={1.5} className="relative z-10" />
           ) : (
-            <Menu size={20} strokeWidth={1.5} />
+            <div className="relative z-10 w-5 h-5 flex flex-col justify-center items-center gap-[3px]">
+              <span className="block h-[2px] w-4 bg-white rounded-full transform transition-all duration-300 group-hover:w-5"></span>
+              <span className="block h-[2px] w-3 bg-white rounded-full transform transition-all duration-300 group-hover:w-4 group-hover:translate-x-[2px]"></span>
+              <span className="block h-[2px] w-5 bg-white rounded-full transform transition-all duration-300 group-hover:w-3 group-hover:translate-x-[-2px]"></span>
+            </div>
           )}
+          <div className="absolute top-0 right-0 w-3 h-3">
+            <div className="absolute top-0 right-0 w-3 h-[1px] bg-emerald-400/70"></div>
+            <div className="absolute top-0 right-0 h-3 w-[1px] bg-emerald-400/70"></div>
+          </div>
+          <div className="absolute bottom-0 left-0 w-3 h-3">
+            <div className="absolute bottom-0 left-0 w-3 h-[1px] bg-emerald-400/70"></div>
+            <div className="absolute bottom-0 left-0 h-3 w-[1px] bg-emerald-400/70"></div>
+          </div>
         </button>
       </div>
 
