@@ -61,7 +61,7 @@ export default function Hero() {
           {/* Stats */}
           <div className={`grid grid-cols-3 gap-4 mt-12 max-w-md mx-auto lg:mx-0 transition-all duration-700 delay-900 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
             {[
-              { value: "20+", label: "Kamar" },
+              { value: "Tersedia", label: "Kamar Kosong" },
               { value: "4.8", label: "Rating" },
               { value: "8+", label: "Tahun" }
             ].map((stat, index) => (
