@@ -5,7 +5,7 @@ export default function About() {
   
   const testimonials = [
     {
-      text: "Tempat tdk ramai, tidak di pinggir jalan utama dan dekat banget dengan kampus merupakan 3 hal yang membuat nyaman penghuni kost apalagi mahasiswa. Orang tua yang jauh juga tidak perlu kawatir karena lokasi berbaur di masyarakat dan dekat masjid serta fasilitas umum yang dibutuhkan. Rekomended deh utk yang butuh kost.",
+      text: "Tempat tdk ramai, tidak di pinggir jalan utama dan dekat banget dengan kampus merupakan 3 hal yang membuat nyaman penghuni kost apalagi mahasiswa. Orang tua yang jauh juga tidak perlu kawatir karena lokasi berbaur di masyarakat dan dekat masjid serta fasilitas umum yang dibutuhkan.",
       name: "Sulis Mukaryanah Widarti",
       role: "Orang Tua Mahasiswa",
       avatar: "/images/testimonials/sulis-widarti.jpg",
@@ -15,21 +15,21 @@ export default function About() {
       text: "Hunian nyaman di hati nyaman di jiwa, sangat betah disini sudah 4 tahun lebih sampai tidak lulus lulus. kaulah jiwaku takkan pernah tergantikan selamanya, terimakasih ash shaff.",
       name: "Fiqri Elpa Ramadhany",
       role: "Mahasiswa UMY",
-      avatar: "https://randomuser.me/api/portraits/men/32.jpg",
+      avatar: "/images/testimonials/fiqri.jpg",
       rating: 5
     },
     {
       text: "Tempatnya bagus, enak, nyaman, kadang dingin kadang panas pokoknya mantap jiwaa",
       name: "Bramara A. Sambada",
       role: "Mahasiswa UMY",
-      avatar: "https://randomuser.me/api/portraits/men/67.jpg",
+      avatar: "/images/testimonials/bramara.jpg",
       rating: 5
     },
     {
       text: "Kost Putra Ash-Shaff adalah hunian nyaman seperti rumah dikampung halaman. tidak terlalu ramai, penghuni ramah, ibu kost baik hati. udah 3 tahun disini ga pernah ngerasa bosen",
       name: "Rifki Asrofi",
       role: "Mahasiswa UMY",
-      avatar: "https://randomuser.me/api/portraits/men/81.jpg",
+      avatar: "/images/testimonials/rifki.jpg",
       rating: 5
     }
   ];
@@ -67,13 +67,13 @@ export default function About() {
               </div>
             </div>
             
-            {/* Testimonial card - simplified */}
-            <div className="absolute left-4 md:left-8 bottom-8 md:bottom-12 bg-white p-4 rounded-lg shadow-lg z-10 max-w-[260px]">
-              <div className="flex items-start space-x-4">
+            {/* Testimonial card - updated to include text */}
+            <div className="absolute left-4 md:left-8 bottom-8 md:bottom-12 bg-white p-4 rounded-lg shadow-lg z-10 max-w-[280px] md:max-w-[300px]">
+              <div className="flex items-start space-x-3 mb-2">
                 <img 
                   src={testimonials[currentTestimonial].avatar} 
                   alt={`Foto ${testimonials[currentTestimonial].name}`} 
-                  className="w-12 h-12 rounded-full object-cover" 
+                  className="w-12 h-12 rounded-full object-cover shrink-0" 
                   loading="lazy"
                 />
                 <div>
@@ -94,8 +94,10 @@ export default function About() {
                 </div>
               </div>
               
+              <p className="text-xs text-gray-600 italic line-clamp-3 mb-2">"{testimonials[currentTestimonial].text}"</p>
+              
               {/* Navigation dots */}
-              <div className="flex justify-center gap-1 mt-3">
+              <div className="flex justify-center gap-1 mt-2">
                 {testimonials.map((_, index) => (
                   <button
                     key={index}
