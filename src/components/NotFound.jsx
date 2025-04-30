@@ -81,7 +81,7 @@ function NotFound() {
                     404
                   </text>
                   <text transform="translate(659.5 213.994)" className="st8 st10" fontSize="24.025">
-                    Ash-Shaff Kost
+                    Ash-Shaff Train
                   </text>
                 </g>
                 <g id="ladders">
