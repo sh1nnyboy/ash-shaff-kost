@@ -51,14 +51,20 @@ export default function Footer() {
               <div className="absolute -bottom-2 left-0 h-0.5 w-12 bg-emerald-400"></div>
             </h3>
             <ul className="space-y-3">
-              {['Beranda', 'Fasilitas', 'Kamar', 'Lokasi', 'Kontak'].map((item, index) => (
+              {[
+                { id: 'home', label: 'Beranda' },
+                { id: 'facilities', label: 'Fasilitas' },
+                { id: 'rooms', label: 'Kamar' },
+                { id: 'location', label: 'Lokasi' },
+                { id: 'contact', label: 'Kontak' }
+              ].map((item, index) => (
                 <li key={index}>
                   <a 
-                    href={`#${item.toLowerCase()}`} 
+                    href={`#${item.id}`} 
                     className="text-gray-300 hover:text-white flex items-center transition-all duration-300 hover:translate-x-1 group"
                   >
                     <span className="h-1.5 w-1.5 bg-emerald-400 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                    {item}
+                    {item.label}
                   </a>
                 </li>
               ))}
