@@ -4,7 +4,6 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
-  const [scrolled, setScrolled] = useState(false);
 
   // Lock body scroll when mobile menu is open
   useEffect(() => {
@@ -27,9 +26,6 @@ export default function Header() {
   // Track scroll position and active section
   useEffect(() => {
     const handleScroll = () => {
-      // Change header appearance on scroll
-      setScrolled(window.scrollY > 20);
-      
       // Track active section
       const sections = ['home', 'facilities', 'rooms', 'location', 'contact'];
       const scrollPosition = window.scrollY + 100;
@@ -79,11 +75,7 @@ export default function Header() {
 
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled 
-          ? 'backdrop-blur-md bg-[#8a9e91]/90 shadow-md' 
-          : 'bg-[#8a9e91]'
-      }`}
+      className="sticky top-0 z-50 bg-[#8a9e91] shadow-md"
       style={{ marginTop: 0 }}
     >
       {/* Futuristic decorative element */}
@@ -119,7 +111,7 @@ export default function Header() {
             <a
               key={index}
               href={item.href}
-              className="relative py-1 px-1 text-sm font-light text-white hover:text-white transition-colors duration-300 group"
+              className="relative py-1 px-1 text-sm font-medium text-white hover:text-white transition-colors duration-300 group"
               onClick={() => handleNavClick(item.href.substring(1))}
             >
               {item.label}
@@ -135,7 +127,7 @@ export default function Header() {
         {/* Contact button (Desktop) */}
         <a 
           href="https://wa.me/6285868015805" 
-          className="hidden md:flex items-center gap-1 text-sm font-light px-4 py-1.5 text-white border border-white/20 rounded-full hover:bg-green-700/30 transition-all duration-300 backdrop-blur-sm"
+          className="hidden md:flex items-center gap-1 text-sm font-medium px-4 py-1.5 text-white border border-white/20 rounded-full hover:bg-green-700/30 transition-all duration-300 backdrop-blur-sm"
           target="_blank" 
           rel="noopener noreferrer"
         >
@@ -182,7 +174,7 @@ export default function Header() {
               <a
                 key={index}
                 href={item.href}
-                className="text-white hover:text-white text-xl font-extralight relative group"
+                className="text-white hover:text-white text-xl font-medium relative group"
                 onClick={() => handleNavClick(item.href.substring(1))}
                 style={{
                   animationDelay: `${index * 50}ms`,
@@ -208,7 +200,7 @@ export default function Header() {
               target="_blank" 
               rel="noopener noreferrer"
             >
-              <span className="text-white text-sm font-light">Hubungi Kami</span>
+              <span className="text-white text-sm font-medium">Hubungi Kami</span>
             </a>
           </div>
         </div>
