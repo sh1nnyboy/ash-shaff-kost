@@ -68,17 +68,19 @@ export default function Facilities() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {facilities.map((facility, index) => (
             <div
               key={index}
-              className="bg-white p-6 md:p-8 rounded-xl shadow-sm hover:shadow-xl transition-shadow border border-gray-100 group hover:border-accent/20 text-left flex flex-col"
+              className="bg-white p-7 md:p-10 rounded-xl shadow-sm hover:shadow-xl transition-shadow border border-gray-100 group hover:border-accent/20 text-left flex flex-col"
             >
-              <div className="flex items-center mb-4">
-                <div className="text-primary group-hover:text-accent transition-colors">{facility.icon}</div>
-                <h3 className="text-xl font-semibold text-primary-dark ml-4">{facility.title}</h3>
+              <div className="flex items-center mb-5">
+                <div className="text-primary group-hover:text-accent transition-colors">
+                  <div className="h-12 w-12 md:h-14 md:w-14">{facility.icon}</div>
+                </div>
+                <h3 className="text-xl font-semibold text-primary-dark ml-5">{facility.title}</h3>
               </div>
-              <p className="text-gray-600">{facility.description}</p>
+              <p className="text-gray-600 text-base">{facility.description}</p>
             </div>
           ))}
         </div>
