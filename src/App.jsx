@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="min-h-screen bg-accent-light text-primary-dark">
       <Header />
-      <main className="pt-16">
+      <main className="pt-0">
         <Hero />
         <About />
         <Facilities />
