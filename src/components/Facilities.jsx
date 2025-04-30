@@ -72,7 +72,7 @@ export default function Facilities() {
           {facilities.map((facility, index) => (
             <div
               key={index}
-              className="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-shadow border border-gray-100 group hover:border-accent/20"
+              className="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-shadow border border-gray-100 group hover:border-accent/20 text-left"
             >
               <div className="text-primary mb-6 group-hover:text-accent transition-colors">{facility.icon}</div>
               <h3 className="text-xl font-semibold text-primary-dark mb-3">{facility.title}</h3>

@@ -198,9 +198,9 @@ export default function About() {
                   <div className="flex-shrink-0 mr-3 md:mr-4 h-10 md:h-12 w-10 md:w-12 flex items-center justify-center bg-primary/10 rounded-full text-lg md:text-xl" aria-hidden="true">
                     {feature.icon}
                   </div>
-                  <div>
-                    <h3 className="font-medium text-gray-800 mb-0.5 md:mb-1 text-sm md:text-base">{feature.title}</h3>
-                    <p className="text-xs md:text-sm text-gray-500">{feature.desc}</p>
+                  <div className="text-left">
+                    <h3 className="font-medium text-gray-800">{feature.title}</h3>
+                    <p className="text-gray-600 text-sm">{feature.desc}</p>
                   </div>
                 </div>
               ))}

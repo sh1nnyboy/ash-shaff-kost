@@ -43,8 +43,8 @@ export default function Location() {
                     <MapPin className="h-6 w-6 text-primary" />
                   </div>
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2 flex items-center">
+                <div className="text-left">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">
                     Alamat Lengkap
                   </h3>
                   <p className="text-gray-600">
@@ -62,7 +62,7 @@ export default function Location() {
                     <Navigation className="h-6 w-6 text-primary" />
                   </div>
                 </div>
-                <div>
+                <div className="text-left">
                   <h3 className="text-xl font-semibold text-gray-800">Jarak ke Lokasi Penting</h3>
                 </div>
               </div>
@@ -72,7 +72,7 @@ export default function Location() {
                   <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center mr-3">
                     <Building className="h-5 w-5 text-primary" />
                   </div>
-                  <div>
+                  <div className="text-left">
                     <span className="font-medium text-sm">UMY</span>
                     <p className="text-gray-600 text-xs">± 3 menit (510m)</p>
                   </div>
@@ -84,7 +84,7 @@ export default function Location() {
                       <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
                     </svg>
                   </div>
-                  <div>
+                  <div className="text-left">
                     <span className="font-medium text-sm">RS PKU</span>
                     <p className="text-gray-600 text-xs">± 4 menit (1.4km)</p>
                   </div>
@@ -94,7 +94,7 @@ export default function Location() {
                   <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center mr-3">
                     <ShoppingCart className="h-5 w-5 text-primary" />
                   </div>
-                  <div>
+                  <div className="text-left">
                     <span className="font-medium text-sm">Pasar Gamping</span>
                     <p className="text-gray-600 text-xs">± 5 menit (1.6km)</p>
                   </div>
@@ -104,7 +104,7 @@ export default function Location() {
                   <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center mr-3">
                     <MapPin className="h-5 w-5 text-primary" />
                   </div>
-                  <div>
+                  <div className="text-left">
                     <span className="font-medium text-sm">Malioboro</span>
                     <p className="text-gray-600 text-xs">± 13 menit (6.2km)</p>
                   </div>
@@ -120,7 +120,7 @@ export default function Location() {
                     <Clock className="h-6 w-6 text-primary" />
                   </div>
                 </div>
-                <div>
+                <div className="text-left">
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">Transportasi</h3>
                   <p className="text-gray-600">
                     Mudah diakses dengan transportasi umum. Tersedia angkutan umum dan ojek online yang beroperasi 24 jam. Bisa diakses kendaraan roda dua maupun roda empat.
