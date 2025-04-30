@@ -162,91 +162,47 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile Navigation Menu - Bottom Bar Style */}
+      {/* Mobile Navigation Overlay */}
       <div 
-        className={`fixed bottom-0 left-0 right-0 z-40 bg-[#6b7968] md:hidden border-t border-white/10 transition-transform duration-300 ${
-          mobileMenuOpen ? 'translate-y-0' : 'translate-y-full'
+        className={`fixed inset-0 z-40 backdrop-blur-lg bg-[#6b7968]/95 transition-all duration-300 md:hidden ${
+          mobileMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0 pointer-events-none'
         }`}
       >
-        <div className="py-2 px-4">
-          <div className="flex justify-between items-center mb-4">
-            <h2 className="text-white font-medium text-lg">Menu</h2>
-            <button 
-              onClick={() => setMobileMenuOpen(false)}
-              className="p-1 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
-            >
-              <X size={20} className="text-white" />
-            </button>
-          </div>
-          
-          <div className="grid grid-cols-3 gap-2 mb-6">
+        <div className="flex flex-col h-full px-6 py-24 justify-center">
+          <nav className="flex flex-col space-y-8 items-center text-center">
             {navItems.map((item, index) => (
               <a
                 key={index}
                 href={item.href}
-                className={`flex flex-col items-center justify-center py-3 px-2 rounded-lg transition-colors ${
-                  activeSection === item.href.substring(1) 
-                    ? 'bg-emerald-600/30 text-white' 
-                    : 'text-white/80 hover:bg-white/10'
-                }`}
+                className="text-white hover:text-white text-xl font-medium relative group"
                 onClick={() => handleNavClick(item.href.substring(1))}
+                style={{
+                  animationDelay: `${index * 50}ms`,
+                  animation: mobileMenuOpen ? 'fadeInUp 0.4s ease forwards' : 'none'
+                }}
               >
-                <span className="text-sm font-medium">{item.label}</span>
-                {activeSection === item.href.substring(1) && (
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-1"></span>
-                )}
+                {item.label}
+                <span className="absolute -bottom-1 left-1/2 w-0 h-px bg-green-400 group-hover:w-full group-hover:left-0 transition-all duration-300"></span>
               </a>
             ))}
-          </div>
+          </nav>
           
-          <div className="flex justify-center pb-6 pt-2">
+          <div 
+            className="mt-16 flex justify-center space-x-5"
+            style={{
+              animation: mobileMenuOpen ? 'fadeIn 0.6s ease forwards 0.3s' : 'none',
+              opacity: 0
+            }}
+          >
             <a 
               href="https://wa.me/6285868015805" 
-              className="flex items-center justify-center gap-2 py-2.5 px-5 w-full max-w-xs text-white font-medium bg-gradient-to-r from-emerald-500/80 to-green-600/80 rounded-full shadow-lg shadow-green-900/20"
+              className="flex items-center justify-center border border-white/20 backdrop-blur-sm bg-green-700/20 hover:bg-green-700/30 transition-all duration-300 px-6 py-2 rounded-full"
               target="_blank" 
               rel="noopener noreferrer"
             >
-              <span>Hubungi Kami</span>
+              <span className="text-white text-sm font-medium">Hubungi Kami</span>
             </a>
           </div>
-        </div>
-      </div>
-
-      {/* Backdrop for mobile menu */}
-      {mobileMenuOpen && (
-        <div 
-          className="fixed inset-0 bg-black/30 backdrop-blur-sm z-30 md:hidden"
-          onClick={() => setMobileMenuOpen(false)}
-        ></div>
-      )}
-
-      {/* Mobile Bottom Navigation Bar (Always visible) */}
-      <div className="fixed bottom-0 left-0 right-0 bg-[#6b7968]/95 backdrop-blur-md border-t border-white/10 md:hidden z-20">
-        <div className="flex justify-around items-center py-2 px-1">
-          {navItems.slice(0, 4).map((item, index) => (
-            <a
-              key={index}
-              href={item.href}
-              className={`flex flex-col items-center py-1.5 px-2 ${
-                activeSection === item.href.substring(1) ? 'text-white' : 'text-white/70'
-              }`}
-              onClick={() => handleNavClick(item.href.substring(1))}
-            >
-              <span className="text-xs font-medium mt-1">{item.label}</span>
-              {activeSection === item.href.substring(1) && (
-                <span className="w-1 h-1 rounded-full bg-emerald-400 mt-0.5"></span>
-              )}
-            </a>
-          ))}
-          <button 
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="flex flex-col items-center py-1.5 px-2 text-white/70"
-          >
-            <span className="w-7 h-7 flex flex-col justify-center items-center rounded-full bg-emerald-600/30">
-              <Menu size={16} strokeWidth={2} className="text-white" />
-            </span>
-            <span className="text-xs font-medium mt-1">Menu</span>
-          </button>
         </div>
       </div>
 
