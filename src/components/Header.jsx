@@ -81,9 +81,10 @@ export default function Header() {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled 
-          ? 'backdrop-blur-md bg-[#8a9e91]/80 shadow-md' 
-          : 'bg-gradient-to-b from-[#8a9e91]/90 to-[#8a9e91]/70'
+          ? 'backdrop-blur-md bg-[#8a9e91]/90 shadow-md' 
+          : 'bg-[#8a9e91]'
       }`}
+      style={{ marginTop: 0 }}
     >
       <div className="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
