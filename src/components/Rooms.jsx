@@ -9,32 +9,32 @@ export default function Rooms() {
     {
       src: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
       price: "Rp8.800.000/tahun",
-      details: ["Ukuran 3x4 meter", "Kasur", "Lemari", "Meja Belajar", "Kamar Mandi Dalam", "WiFi 150 Mbps", "CCTV"]
+      details: ["Ukuran 4x3 meter", "Kamar Mandi Dalam", "Kulkas Bersama", "Dapur Bersama", "WiFi 150 Mbps", "Sudah Termasuk Listrik & WiFi", "CCTV"]
     },
     {
       src: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
       price: "Rp8.800.000/tahun",
-      details: ["Ukuran 3x4 meter", "Kasur", "Lemari", "Meja Belajar", "Kamar Mandi Dalam", "WiFi 150 Mbps", "CCTV"]
+      details: ["Ukuran 4x3 meter", "Kamar Mandi Dalam", "Kulkas Bersama", "Dapur Bersama", "WiFi 150 Mbps", "Sudah Termasuk Listrik & WiFi", "CCTV"]
     },
     {
       src: "https://images.unsplash.com/photo-1554995207-c18c203602cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
       price: "Rp8.800.000/tahun",
-      details: ["Ukuran 3x4 meter", "Kasur", "Lemari", "Meja Belajar", "Kamar Mandi Dalam", "WiFi 150 Mbps", "CCTV"]
+      details: ["Ukuran 4x3 meter", "Kamar Mandi Dalam", "Kulkas Bersama", "Dapur Bersama", "WiFi 150 Mbps", "Sudah Termasuk Listrik & WiFi", "CCTV"]
     },
     {
       src: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
       price: "Rp8.800.000/tahun",
-      details: ["Ukuran 3x4 meter", "Kasur", "Lemari", "Meja Belajar", "Kamar Mandi Dalam", "WiFi 150 Mbps", "CCTV"]
+      details: ["Ukuran 4x3 meter", "Kamar Mandi Dalam", "Kulkas Bersama", "Dapur Bersama", "WiFi 150 Mbps", "Sudah Termasuk Listrik & WiFi", "CCTV"]
     },
     {
       src: "https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
       price: "Rp8.800.000/tahun",
-      details: ["Ukuran 3x4 meter", "Kasur", "Lemari", "Meja Belajar", "Kamar Mandi Dalam", "WiFi 150 Mbps", "CCTV"]
+      details: ["Ukuran 4x3 meter", "Kamar Mandi Dalam", "Kulkas Bersama", "Dapur Bersama", "WiFi 150 Mbps", "Sudah Termasuk Listrik & WiFi", "CCTV"]
     },
     {
       src: "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
       price: "Rp8.800.000/tahun",
-      details: ["Ukuran 3x4 meter", "Kasur", "Lemari", "Meja Belajar", "Kamar Mandi Dalam", "WiFi 150 Mbps", "CCTV"]
+      details: ["Ukuran 4x3 meter", "Kamar Mandi Dalam", "Kulkas Bersama", "Dapur Bersama", "WiFi 150 Mbps", "Sudah Termasuk Listrik & WiFi", "CCTV"]
     }
   ];
 
@@ -131,6 +131,25 @@ export default function Rooms() {
                     <span className="break-words">{detail}</span>
                   </li>
                 ))}
+              </ul>
+            </div>
+            
+            {/* Payment terms */}
+            <div className="bg-yellow-50 p-4 md:p-6 rounded-lg md:rounded-xl mb-5 md:mb-6 border border-yellow-200">
+              <h4 className="text-base md:text-lg font-semibold text-primary-dark mb-3 md:mb-4">Ketentuan Pembayaran</h4>
+              <ul className="space-y-2">
+                <li className="flex items-start text-gray-600 text-sm md:text-base">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 md:h-5 md:w-5 mr-1.5 md:mr-2 flex-shrink-0 text-yellow-600 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clipRule="evenodd" />
+                  </svg>
+                  <span>DP minimal Rp1.000.000 untuk booking kamar</span>
+                </li>
+                <li className="flex items-start text-gray-600 text-sm md:text-base">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 md:h-5 md:w-5 mr-1.5 md:mr-2 flex-shrink-0 text-yellow-600 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clipRule="evenodd" />
+                  </svg>
+                  <span>Pelunasan dilakukan saat penyerahan kunci</span>
+                </li>
               </ul>
             </div>
             
