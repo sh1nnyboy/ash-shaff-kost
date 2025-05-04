@@ -79,7 +79,7 @@ export default function Hero() {
             {/* Main image */}
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 md:border-8 border-white">
               <img 
-                src="https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                src="images/cover.jpeg" 
                 alt="Kost Ash-Shaff - Bangunan kost nyaman dan strategis di Bantul Yogyakarta dekat kampus UMY" 
                 className="w-full h-full object-cover"
                 width="600"

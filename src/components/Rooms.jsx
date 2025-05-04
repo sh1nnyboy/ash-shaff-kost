@@ -7,32 +7,37 @@ export default function Rooms() {
   // HD room images from Unsplash
   const images = [
     {
-      src: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      src: "images/cover.jpeg",
       price: "Rp8.800.000/tahun",
       details: ["Ukuran 4x3 meter", "Kamar Mandi Dalam", "Kulkas Bersama", "Dapur Bersama", "WiFi 150 Mbps", "Sudah Termasuk Listrik & WiFi", "CCTV"]
     },
     {
-      src: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      src: "images/kamar/1.jpeg",
       price: "Rp8.800.000/tahun",
       details: ["Ukuran 4x3 meter", "Kamar Mandi Dalam", "Kulkas Bersama", "Dapur Bersama", "WiFi 150 Mbps", "Sudah Termasuk Listrik & WiFi", "CCTV"]
     },
     {
-      src: "https://images.unsplash.com/photo-1554995207-c18c203602cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      src: "images/kamar/2.jpeg",
       price: "Rp8.800.000/tahun",
       details: ["Ukuran 4x3 meter", "Kamar Mandi Dalam", "Kulkas Bersama", "Dapur Bersama", "WiFi 150 Mbps", "Sudah Termasuk Listrik & WiFi", "CCTV"]
     },
     {
-      src: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      src: "images/kamar/3.jpeg",
       price: "Rp8.800.000/tahun",
       details: ["Ukuran 4x3 meter", "Kamar Mandi Dalam", "Kulkas Bersama", "Dapur Bersama", "WiFi 150 Mbps", "Sudah Termasuk Listrik & WiFi", "CCTV"]
     },
     {
-      src: "https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      src: "images/kamar/4.jpeg",
       price: "Rp8.800.000/tahun",
       details: ["Ukuran 4x3 meter", "Kamar Mandi Dalam", "Kulkas Bersama", "Dapur Bersama", "WiFi 150 Mbps", "Sudah Termasuk Listrik & WiFi", "CCTV"]
     },
     {
-      src: "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      src: "images/kamar/5.jpeg",
+      price: "Rp8.800.000/tahun",
+      details: ["Ukuran 4x3 meter", "Kamar Mandi Dalam", "Kulkas Bersama", "Dapur Bersama", "WiFi 150 Mbps", "Sudah Termasuk Listrik & WiFi", "CCTV"]
+    },
+    {
+      src: "images/kamar/6.jpeg",
       price: "Rp8.800.000/tahun",
       details: ["Ukuran 4x3 meter", "Kamar Mandi Dalam", "Kulkas Bersama", "Dapur Bersama", "WiFi 150 Mbps", "Sudah Termasuk Listrik & WiFi", "CCTV"]
     }
@@ -99,13 +104,25 @@ export default function Rooms() {
               </svg>
             </button>
             
+            {/* Blurred background for portrait images */}
+            <div 
+              className="absolute inset-0 z-0 blur-xl opacity-70 scale-110"
+              style={{
+                backgroundImage: `url(${images[currentImageIndex].src})`,
+                backgroundPosition: 'center',
+                backgroundSize: 'cover'
+              }}
+            ></div>
+            
             {/* Carousel image */}
-            <img 
-              src={images[currentImageIndex].src} 
-              alt="Kamar Kost Ash-Shaff" 
-              className="w-full h-full object-cover transition-opacity duration-500"
-              loading="lazy"
-            />
+            <div className="relative z-1 h-full w-full flex items-center justify-center">
+              <img 
+                src={images[currentImageIndex].src} 
+                alt="Kamar Kost Ash-Shaff" 
+                className="max-h-full max-w-full object-contain transition-opacity duration-500"
+                loading="lazy"
+              />
+            </div>
             
             {/* Carousel indicators */}
             <div className="absolute bottom-3 md:bottom-4 left-0 right-0 flex justify-center gap-1 md:gap-2 z-10">
